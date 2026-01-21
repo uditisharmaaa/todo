@@ -1,16 +1,53 @@
-# React + Vite
+# Internship TODO List App! 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight TODO list app built with React that initializes from mock backend data and persists updates to `localStorage`.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Load initial tasks from mock backend data on first run
+- Persist tasks to `localStorage` so changes survive refresh
+- Add new tasks with validation
+- Toggle task completion
+- Delete tasks with confirmation
+- Filter tasks by All / Completed / Pending (with counts)
+- Reset back to original mock tasks
 
-## React Compiler
+## Images
+![Todo App Screenshot](./images/image1.png)
+![Todo App Screenshot](./images/image2.png)
+![Todo App Screenshot](./images/image3.png)
+![Todo App Screenshot](./images/image4.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Tailwind CSS
+
+## Data & Persistence
+
+- **First run:** seeds tasks from mock backend data and stores them in `localStorage`
+- **Subsequent runs:** loads tasks from `localStorage`
+- Any change to tasks (add/toggle/delete/reset) automatically updates `localStorage`
+
+## Project Structure
+
+- `src/App.jsx` — main application logic and UI
+- `src/data/mockTasks.js` — mock backend task seed
+
+## Getting Started
+
+### Prerequisites
+- Node.js (LTS recommended)
+- npm
+
+### Install
+```bash
+npm install
+```
+
+### Run locally 
+```bash
+npm run dev
+```
+
